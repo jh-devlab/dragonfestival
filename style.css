@@ -31,6 +31,28 @@ nav ul li a {
     font-weight: bold;
 }
 
+.highlight-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 50%, #f0f8ff 100%);
+    padding: 2em;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.highlight-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.highlight-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 main {
     padding: 2em;
 }
