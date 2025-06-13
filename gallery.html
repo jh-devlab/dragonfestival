@@ -1,14 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="ko">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>포토·영상 - 구문소 용축제</title>
-    <link rel="stylesheet" href="style.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포토·영상 - 구문소 용축제</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main { max-width: 800px; margin: auto; padding: 1rem; }
+    .media { margin-top: 2rem; }
+    .media img,
+    .media video,
+    .media iframe {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
 <body>
+
  <header>
     <a href="index.html">← 홈으로</a>
     <h1>포토 & 영상</h1>
  </header>
-<main><h2>포토·영상</h2><p>지난 축제 현장 사진과 영상을 감상해보세요.</p><div style="height:200px;background:#ddd;text-align:center;line-height:200px;">사진/영상 슬라이더 삽입</div></main>
-<footer><p>© 2025 구문소 용축제 추진위원회</p></footer>
-</body></html>
+
+ <main>
+   <h2>포토·영상</h2>
+   <p>지난 축제 현장 사진과 영상을 감상해보세요.</p>
+
+   <!-- 사진 삽입 -->
+   <div class="media">
+     <h3>축제 현장 스냅샷</h3>
+     <img src="images/photo1.jpg" alt="용축제에 참여한 가족들의 모습">
+   </div>
+
+   <!-- 동영상 삽입 (로컬 파일) -->
+   <div class="media">
+     <h3>하이라이트 영상</h3>
+     <video controls>
+       <source src="videos/highlight.mp4" type="video/mp4">
+       브라우저가 동영상을 지원하지 않습니다.
+     </video>
+   </div>
+
+   <!-- 또는 YouTube 임베드 예시 -->
+   <!--
+   <div class="media">
+     <h3>하이라이트 영상 (YouTube)</h3>
+     <iframe width="560" height="315"
+             src="https://www.youtube.com/embed/VIDEO_ID"
+             frameborder="0" allowfullscreen>
+     </iframe>
+   </div>
+   -->
+ </main>
+
+ <footer>
+   <p>© 2025 구문소 용축제 추진위원회</p>
+ </footer>
+
+</body>
+</html>
