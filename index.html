@@ -6,22 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>구문소 용축제</title>
     <link rel="stylesheet" href="style.css">
- <style>
-    /* map.html의 map-container 스타일 */
-    #map-container {
-      width: 100%;
-      height: 300px;
-      background: #ccc;
-      text-align: center;
-      line-height: 300px;
-      margin-top: 1rem;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
- </style>
 </head>
 <body>
     <header>
@@ -32,7 +16,7 @@
                 <li><a href="intro.html">축제 소개</a></li>
                 <li><a href="program.html">프로그램 안내</a></li>
                 <li><a href="apply.html">참여 신청</a></li>
-                <li><a href="#" id="show-map">오시는 길</a></li>
+                <li><a href="map.html">오시는 길</a></li>
                 <li><a href="notice.html">공지사항</a></li>
                 <li><a href="gallery.html">포토·영상</a></li>
                 <li><a href="faq.html">자주묻는질문</a></li>
@@ -59,31 +43,12 @@
         </ul>
     </div>
     <div class="highlight-image">
-        <img src="images/dragon_poster.jpg" alt="축제 포스터">
+        <img src="images/dragon_poster(1280_640).jpg" alt="축제 포스터">
     </div>
-        </section>
-        <section id="transport">
-          <h2>오시는 길</h2>
-          <p>태백시 구문소 (강원특별자치도 태백시 동점동)</p>
-          <p>자가용·대중교통·주차장 정보는 추후 업데이트 예정입니다.</p>
-          <div id="map-container">지도 삽입 영역</div>
         </section>
     </main>
     <footer>
         <p>© 2025 구문소 용축제 추진위원회</p>
     </footer>
-    <script>
-    document.getElementById('show-map').addEventListener('click', function(e) {
-      e.preventDefault();
-      const address = '강원특별자치도 태백시 동점동 285';
-      const src = 'https://maps.google.com/maps?q='
-        + encodeURIComponent(address)
-        + '&z=15&output=embed';
-      document.getElementById('map-container').innerHTML =
-        '<iframe src="' + src + '" allowfullscreen loading="lazy"></iframe>';
-      // 클릭 후 스크롤 이동 (선택)
-      document.getElementById('transport').scrollIntoView({ behavior: 'smooth' });
-    });
-    </script>
 </body>
 </html>
