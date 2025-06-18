@@ -1,4 +1,5 @@
-
+/* ─────────────────────────────────────────────────────────── */
+/* 기본 레이아웃 & 색상 설정 (원본)                        */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -31,11 +32,13 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* ─────────────────────────────────────────────────────────── */
+/* 하이라이트 섹션: 프로그램 갤러리 + 포스터 배치           */
 .highlight-section {
     display: flex;
-    flex-wrap: nowrap; /* 줄바꿈 방지 */
+    flex-wrap: wrap;       /* 여러 줄로 감싸기 */ 
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* 상단 기준 정렬 */
     padding: 2em;
     gap: 2em;
 }
@@ -58,6 +61,25 @@ nav ul li a {
     max-height: 400px;
 }
 
+/* ─────────────────────────────────────────────────────────── */
+/* 프로그램 갤러리 5행×2열 그리드                          */
+.program-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2열 */
+    grid-auto-rows: auto;                  /* 자동 5행 생성 */
+    gap: 1rem;
+    max-width: 600px;                      /* 포스터 크기와 비슷하게 */
+    flex: 1;                               /* flex 환경에서 공간 분배 */
+}
+
+.program-gallery a img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* 본문 & 푸터 (원본)                                       */
 main {
     padding: 2em;
 }
@@ -71,3 +93,4 @@ footer {
     width: 100%;
     bottom: 0;
 }
+/* ─────────────────────────────────────────────────────────── */
