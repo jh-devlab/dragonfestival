@@ -1,53 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>구문소 용축제</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제12회 구문소 용축제</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 프로그램 갤러리 5행×2열 그리드 */
+    .program-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: auto;
+      gap: 1rem;
+      max-width: 600px; /* 포스터 넓이에 맞춰 조정 */
+    }
+    .program-gallery a img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+    /* highlight-section 레이아웃 조정 */
+    .highlight-section {
+      display: flex;
+      gap: 2rem;
+      align-items: start;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+    .highlight-image {
+      flex: 1;
+      max-width: 400px; /* 포스터 너비 */
+    }
+    .highlight-image img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>제12회 구문소 용축제</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">홈</a></li>
-                <li><a href="intro.html">축제 소개</a></li>
-                <li><a href="program.html">프로그램 안내</a></li>
-                <li><a href="map.html">오시는 길</a></li>
-                <li><a href="notice.html">공지사항</a></li>
-                <li><a href="gallery.html">포토·영상</a></li>
-                <li><a href="faq.html">자주묻는질문</a></li>
-                <li><a href="food.html">먹거리식당 안내</a></li>
-                <li><a href="layout.html">행사장 배치도</a></li>
-                <li><a href="booths.html">체험부스 안내</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>용의전설, 구문소로 DIVE!</h2>
-            <p>2025년 7월 12일 ~ 13일 | 태백시 구문소 일원</p>
-        </section>
-        <section class="highlight-section">
-    <div class="highlight-text">
-        <h3>하이라이트 프로그램</h3>
-        <ul>
-            <li>용신제</li>
-            <li>워터슬라이드</li>
-            <li>여의주 굴리기</li>
-            <li>복불복 게임</li>
-        </ul>
-    </div>
-    <div class="highlight-image">
+
+  <header>
+    <h1>제12회 구문소 용축제</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="intro.html">축제 소개</a></li>
+        <li><a href="program.html">프로그램 안내</a></li>
+        <li><a href="map.html">오시는 길</a></li>
+        <li><a href="notice.html">공지사항</a></li>
+        <li><a href="gallery.html">포토·영상</a></li>
+        <li><a href="faq.html">자주묻는질문</a></li>
+        <li><a href="food.html">먹거리식당 안내</a></li>
+        <li><a href="layout.html">행사장 배치도</a></li>
+        <li><a href="booths.html">체험부스 안내</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>용의전설, 구문소로 DIVE!</h2>
+      <p>2025년 7월 12일 ~ 13일 | 태백시 구문소 관광단지 일원</p>
+    </section>
+
+    <!-- 하이라이트 섹션: 왼쪽에 프로그램 갤러리, 오른쪽에 포스터 -->
+    <section class="highlight-section">
+      <!-- 프로그램 이미지 그리드 -->
+      <div class="program-gallery">
+        <a href="programs/yongshinje.html">
+          <img src="images/programs/yongshinje.jpg" alt="용신제">
+        </a>
+        <a href="programs/mudfish.html">
+          <img src="images/programs/mudfish.jpg" alt="미꾸라지잡기(용용죽겠지)">
+        </a>
+        <a href="programs/waterslide.html">
+          <img src="images/programs/waterslide.jpg" alt="워터슬라이드">
+        </a>
+        <a href="programs/mudfish2.html">
+          <img src="images/programs/mudfish2.jpg" alt="미꾸라지잡기">
+        </a>
+        <a href="programs/boat.html">
+          <img src="images/programs/boat.jpg" alt="용궁탐험보트">
+        </a>
+        <a href="programs/yeouiju.html">
+          <img src="images/programs/yeouiju.jpg" alt="여의주 굴리기">
+        </a>
+        <a href="programs/jumpring.html">
+          <img src="images/programs/jumpring.jpg" alt="점프링 던지기">
+        </a>
+        <a href="programs/game.html">
+          <img src="images/programs/game.jpg" alt="복불복 게임">
+        </a>
+        <a href="programs/concert.html">
+          <img src="images/programs/concert.jpg" alt="지역가수 공연">
+        </a>
+        <a href="programs/sing.html">
+          <img src="images/programs/sing.jpg" alt="노래자랑">
+        </a>
+      </div>
+
+      <!-- 축제 포스터 -->
+      <div class="highlight-image">
         <img src="images/dragon_poster.jpg" alt="축제 포스터">
-    </div>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 구문소 용축제 추진위원회</p>
-    </footer>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 구문소 용축제 추진위원회</p>
+  </footer>
+
 </body>
 </html>
